@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مدیریت زنو بانک</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="topbar"><h1>مدیریت زنو بانک</h1><button class="gear" id="gear" type="button" aria-label="تنظیمات" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></button></div>
+  <section class="settings" id="settings" aria-label="تنظیمات">
+    <h3 class="sh" style="margin-top:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><span>تم</span></h3>
+    <div class="seg grid"><button type="button" id="skin-classic" aria-pressed="true">روشن آبی</button><button type="button" id="skin-gold" aria-pressed="false">مشکی طلایی</button><button type="button" id="skin-pink" aria-pressed="false">مشکی صورتی</button><button type="button" id="skin-white" aria-pressed="false">سفید</button></div>
+    <h3 class="sh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span>زبان</span></h3>
+    <div class="seg"><button type="button" id="lang-fa" aria-pressed="true">فارسی</button><button type="button" id="lang-en" aria-pressed="false">English</button></div>
+    <h3>درباره ما</h3>
+    <a class="about" id="about" href="https://ble.ir/sadrazxp" target="_blank" rel="noopener noreferrer"><span class="abl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M6.376 18.91a6 6 0 0 1 11.249.003"/><circle cx="12" cy="11" r="4"/></svg><span>درباره ما</span></span><small>@sadrazxp</small></a>
+  </section>
+  <section class="hero" id="hero" aria-live="polite">
+    <div id="hello" style="font-weight:600"></div>
+    <small id="scope">موجودی همه حساب‌ها</small>
+    <div class="total"><span id="bal">۰</span><span>ریال</span></div>
+    <small id="baltoman"></small>
+  </section>
+  <div class="dots" id="dots" aria-hidden="true"></div>
+  <div class="split">
+    <div><small>کل درآمد</small><b class="in" id="inc">۰</b></div>
+    <div><small>کل هزینه</small><b class="out" id="exp">۰</b></div>
+  </div>
+
+  <h2>حساب‌ها</h2>
+  <div class="accs" id="accs"></div>
+  <small class="empty" style="display:block;padding:10px 2px 0">برای افزودن حساب، نام بانک را بنویس. شماره حساب، شماره کارت، شماره شبا و موجودی اولیه اختیاری‌اند و بعداً هم می‌شه تغییرشون داد. رمز کارت (پین) را هرگز ننویس. CVV2 فقط روی همین مرورگر ذخیره می‌شه و تو پشتیبان نمی‌اد.</small>
+  <div class="newacc">
+    <input id="newname" list="banks" placeholder="نام بانک (مثلاً ملت)" aria-label="نام بانک"><datalist id="banks"></datalist><input id="newnum" inputmode="numeric" dir="ltr" placeholder="شماره حساب (اختیاری)" aria-label="شماره حساب"><input id="newcard" inputmode="numeric" dir="ltr" maxlength="23" placeholder="شماره کارت (اختیاری)" aria-label="شماره کارت"><input id="newexp" inputmode="numeric" dir="ltr" maxlength="5" placeholder="تاریخ انقضا (ماه/سال)" aria-label="تاریخ انقضا"><input id="newcvv" type="password" inputmode="numeric" autocomplete="off" dir="ltr" maxlength="4" placeholder="CVV2 (اختیاری)" aria-label="CVV2"><input id="newsheba" dir="ltr" maxlength="30" placeholder="شماره شبا (اختیاری)" aria-label="شماره شبا"><input id="newinit" type="number" inputmode="numeric" placeholder="موجودی اولیه (ریال)" aria-label="موجودی اولیه">
+    <button class="btn alt" id="addacc" type="button">افزودن بانک</button>
+  </div>
+  <div class="newacc" id="editnum" style="display:none">
+    <input id="curnum" inputmode="numeric" dir="ltr" placeholder="شماره حساب" aria-label="ویرایش شماره حساب">
+    <input id="curcard" inputmode="numeric" dir="ltr" maxlength="23" placeholder="شماره کارت" aria-label="شماره کارت">
+    <input id="curexp" inputmode="numeric" dir="ltr" maxlength="5" placeholder="تاریخ انقضا (ماه/سال)" aria-label="تاریخ انقضا">
+    <input id="curcvv" type="password" inputmode="numeric" autocomplete="off" dir="ltr" maxlength="4" placeholder="CVV2" aria-label="CVV2">
+    <input id="cursheba" dir="ltr" maxlength="30" placeholder="شماره شبا" aria-label="شماره شبا">
+    <input id="curinit" type="number" inputmode="numeric" placeholder="موجودی اولیه (ریال)" aria-label="موجودی اولیه">
+    <button class="btn alt" id="savenum" type="button">ذخیره اطلاعات حساب</button>
+    <button class="btn alt" id="delacc" type="button" style="color:var(--out)">حذف حساب</button>
+    <button class="btn alt" id="copynum" type="button">کپی شماره حساب</button>
+    <button class="btn alt" id="togcvv" type="button">نمایش CVV2</button>
+    <button class="btn alt" id="copycard" type="button">کپی شماره کارت</button>
+    <button class="btn alt" id="copysheba" type="button">کپی شبا</button>
+    <small id="delmsg" class="empty" role="status" style="width:100%;padding:0"></small>
+  </div>
+
+  <h2>اطلاعات من</h2>
+  <div class="add" style="display:grid">
+    <input id="fn" placeholder="نام" aria-label="نام">
+    <input id="ln" placeholder="نام خانوادگی" aria-label="نام خانوادگی">
+    <input id="bd" class="full" placeholder="تاریخ تولد (مثلاً ۱۳۷۰/۰۵/۱۲)" aria-label="تاریخ تولد">
+    <button class="btn alt full" id="saveinfo" type="button">ذخیره اطلاعات</button>
+    <small id="infomsg" class="full empty" role="status"></small>
+  </div>
+
+  <h2>ثبت تراکنش</h2>
+  <div class="add" id="addbox" style="display:grid">
+    <select id="type" aria-label="نوع"><option value="in">درآمد (واریز)</option><option value="out">هزینه (برداشت)</option></select>
+    <input id="amount" type="number" inputmode="numeric" min="0" placeholder="مبلغ (ریال)" aria-label="مبلغ">
+    <input id="desc" class="full" placeholder="توضیح (مثلاً حقوق، خرید)" aria-label="توضیح">
+    <select id="txacc" class="full" aria-label="حساب"></select>
+    <select id="cat" class="full" aria-label="دسته‌بندی"><option>خوراک</option><option>قبض</option><option>حمل‌ونقل</option><option>خرید</option><option>پوشاک</option><option>خانه</option><option>سلامت</option><option>آموزش</option><option>تفریح</option><option>حقوق</option><option>سایر</option></select>
+    <button class="btn full" id="save" type="button">ثبت تراکنش</button>
+    <button class="btn alt full" id="cancel" type="button" style="display:none">لغو ویرایش</button>
+  </div>
+
+  <h2>یادداشت خرید</h2>
+  <div class="add">
+    <input id="ntitle" class="full" placeholder="چی می‌خوای بخری؟ (مثلاً نان و شیر)" aria-label="یادداشت">
+    <label class="lbl">دسته<select id="ncat"><option>خوراکی</option><option>پوشاک</option><option>خانه</option><option>حمل‌ونقل</option><option>سلامت</option><option>آموزش</option><option>تفریح</option><option>قبض</option><option>سایر</option></select></label>
+    <label class="lbl">با کدوم حساب می‌خوای بخری؟<select id="nacc"></select></label>
+    <input id="namount" class="full" type="number" inputmode="numeric" min="0" placeholder="مبلغ تقریبی (ریال، اختیاری)" aria-label="مبلغ تقریبی">
+    <button class="btn full" id="nadd" type="button">افزودن یادداشت</button>
+  </div>
+  <div id="notes" class="notes"></div>
+
+  <h2>انتقال بین حساب‌ها</h2>
+  <div class="add">
+    <label class="lbl">از حساب<select id="trfrom"></select></label>
+    <label class="lbl">به حساب<select id="trto"></select></label>
+    <input id="tramount" class="full" type="number" inputmode="numeric" min="0" placeholder="مبلغ انتقال (ریال)" aria-label="مبلغ انتقال">
+    <button class="btn full" id="trsave" type="button">ثبت انتقال</button>
+    <small id="trmsg" class="full empty" role="status"></small>
+  </div>
+
+  <h2>هزینه‌ها بر اساس دسته</h2>
+  <div id="chart"></div>
+
+  <h2>تراکنش‌ها <small>(برای ویرایش، روی توضیح بزنید)</small></h2>
+  <input id="q" class="search" type="search" placeholder="جستجو در توضیح یا دسته" aria-label="جستجو">
+  <ul id="list"></ul>
+
+  <h2>پشتیبان‌گیری</h2>
+  <div class="add" style="display:grid">
+    <textarea id="bk" class="full" rows="4" dir="ltr" placeholder="متن پشتیبان اینجا نمایش داده می‌شود. برای بازیابی، متن را اینجا جای‌گذاری کنید." aria-label="متن پشتیبان"></textarea>
+    <button class="btn alt" id="bkout" type="button">تهیه پشتیبان</button>
+    <button class="btn alt" id="bkin" type="button">بازیابی از متن</button>
+    <small id="bkmsg" class="full empty" role="status"></small>
+  </div>
+</main>
+<script src="logos.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
