@@ -9,22 +9,23 @@
 </head>
 <body>
 <main>
-  <div class="topbar"><h1>مدیریت زنو بانک</h1><button class="gear" id="gear" type="button" aria-label="تنظیمات" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></button></div>
+  <div class="topbar"><h1>مدیریت زنو بانک</h1><div class="tbtns"><button class="gear" id="mgbtn" type="button" aria-label="مدیریت" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg></button><button class="gear" id="gear" type="button" aria-label="تنظیمات" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></button></div></div>
   <section class="settings" id="settings" aria-label="تنظیمات">
-    <h3 class="sh" style="margin-top:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg><span>تم</span></h3>
-    <div class="seg grid"><button type="button" id="skin-classic" aria-pressed="true">روشن آبی</button><button type="button" id="skin-gold" aria-pressed="false">مشکی طلایی</button><button type="button" id="skin-pink" aria-pressed="false">مشکی صورتی</button><button type="button" id="skin-white" aria-pressed="false">سفید</button></div>
-    <h3 class="sh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span>زبان</span></h3>
-    <div class="seg"><button type="button" id="lang-fa" aria-pressed="true">فارسی</button><button type="button" id="lang-en" aria-pressed="false">English</button></div>
-    <h3>درباره ما</h3>
+    <button class="mgbtn row" id="themebtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg><span>تم</span><span class="rv"><i class="dot" id="curdot"></i><span id="curname"></span></span></button>
+    <button class="mgbtn row" id="langbtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span>زبان</span><span class="rv"><span class="flag" id="langflag" style="font-size:18px;margin-inline-end:6px"></span><span id="langname"></span></span></button>
+    <button class="mgbtn row" id="curbtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg><span>ارز</span><span class="rv" id="curval"></span></button>
+    <button class="mgbtn row" id="notifbtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span>یادآوری</span></button>
+    <button class="mgbtn row" id="catsbtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg><span>دسته‌های من</span></button>
     <a class="about" id="about" href="https://ble.ir/sadrazxp" target="_blank" rel="noopener noreferrer"><span class="abl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M6.376 18.91a6 6 0 0 1 11.249.003"/><circle cx="12" cy="11" r="4"/></svg><span>درباره ما</span></span><small>@sadrazxp</small></a>
   </section>
   <section class="hero" id="hero" aria-live="polite">
     <div id="hello" style="font-weight:600"></div>
     <small id="scope">موجودی همه حساب‌ها</small>
-    <div class="total"><span id="bal">۰</span><span>ریال</span></div>
+    <div class="total"><span id="bal">۰</span><span id="balunit">ریال</span></div>
     <small id="baltoman"></small>
   </section>
   <div class="dots" id="dots" aria-hidden="true"></div>
+  <div id="alerts"></div>
   <div class="split">
     <div><small>کل درآمد</small><b class="in" id="inc">۰</b></div>
     <div><small>کل هزینه</small><b class="out" id="exp">۰</b></div>
@@ -50,18 +51,22 @@
     <button class="btn alt" id="togcvv" type="button">نمایش CVV2</button>
     <button class="btn alt" id="copycard" type="button">کپی شماره کارت</button>
     <button class="btn alt" id="copysheba" type="button">کپی شبا</button>
+    <button class="btn alt" id="mvup" type="button" aria-label="بالا">▲</button>
+    <button class="btn alt" id="mvdn" type="button" aria-label="پایین">▼</button>
+    <button class="btn alt" id="setmain" type="button">حساب اصلی</button>
     <small id="delmsg" class="empty" role="status" style="width:100%;padding:0"></small>
   </div>
 
-  <h2>اطلاعات من</h2>
-  <div class="add" style="display:grid">
-    <input id="fn" placeholder="نام" aria-label="نام">
-    <input id="ln" placeholder="نام خانوادگی" aria-label="نام خانوادگی">
-    <input id="bd" class="full" placeholder="تاریخ تولد (مثلاً ۱۳۷۰/۰۵/۱۲)" aria-label="تاریخ تولد">
-    <button class="btn alt full" id="saveinfo" type="button">ذخیره اطلاعات</button>
-    <small id="infomsg" class="full empty" role="status"></small>
-  </div>
+  <button class="btn" id="quickadd" type="button" style="width:100%;margin-top:18px">ثبت تراکنش</button>
+  <h2>تراکنش‌ها <small>(برای ویرایش، روی توضیح بزنید)</small></h2>
+  
+  <ul id="list"></ul>
 
+  
+  <section id="mgmt">
+  <h2 class="mh">مدیریت</h2>
+  <div id="mgmenu"><button class="mgbtn" type="button" data-t="addtx">ثبت تراکنش</button><button class="mgbtn" type="button" data-t="filters">جستجو و فیلتر تراکنش‌ها</button><button class="mgbtn" type="button" data-t="info">اطلاعات من</button><button class="mgbtn" type="button" data-t="notes">یادداشت خرید</button><button class="mgbtn" type="button" data-t="transfer">انتقال بین حساب‌ها</button><button class="mgbtn" type="button" data-t="debts">بدهی و طلب</button><button class="mgbtn" type="button" data-t="goals">هدف پس‌انداز</button><button class="mgbtn" type="button" data-t="dues">اقساط و چک‌ها</button><button class="mgbtn" type="button" data-t="rec">تراکنش‌های تکراری</button><button class="mgbtn" type="button" data-t="assets">دارایی‌ها (ارز و طلا)</button><button class="mgbtn" type="button" data-t="split">تقسیم هزینه</button><button class="mgbtn" type="button" data-t="trend">روند ماهانه</button><button class="mgbtn" type="button" data-t="chart">هزینه‌ها بر اساس دسته</button><button class="mgbtn" type="button" data-t="backup">پشتیبان‌گیری</button></div>
+  <section class="mg" id="mg-addtx"><button class="btn alt mgback" type="button">بازگشت</button>
   <h2>ثبت تراکنش</h2>
   <div class="add" id="addbox" style="display:grid">
     <select id="type" aria-label="نوع"><option value="in">درآمد (واریز)</option><option value="out">هزینه (برداشت)</option></select>
@@ -69,10 +74,24 @@
     <input id="desc" class="full" placeholder="توضیح (مثلاً حقوق، خرید)" aria-label="توضیح">
     <select id="txacc" class="full" aria-label="حساب"></select>
     <select id="cat" class="full" aria-label="دسته‌بندی"><option>خوراک</option><option>قبض</option><option>حمل‌ونقل</option><option>خرید</option><option>پوشاک</option><option>خانه</option><option>سلامت</option><option>آموزش</option><option>تفریح</option><option>حقوق</option><option>سایر</option></select>
+    <label class="lbl full">عکس رسید (اختیاری)<input id="rcpt" type="file" accept="image/*"></label>
     <button class="btn full" id="save" type="button">ثبت تراکنش</button>
     <button class="btn alt full" id="cancel" type="button" style="display:none">لغو ویرایش</button>
-  </div>
-
+  </div></section>
+  <section class="mg" id="mg-filters"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>جستجو و فیلتر تراکنش‌ها</h2>
+  <input id="q" class="search" type="search" placeholder="جستجو در توضیح یا دسته" aria-label="جستجو">
+  <div class="add" style="margin-bottom:10px"><select id="ftype" aria-label="نوع"><option value="">همه نوع‌ها</option><option value="in">درآمد</option><option value="out">هزینه</option></select><select id="fcat" aria-label="دسته‌بندی"></select><input id="ffrom" type="date" aria-label="از تاریخ"><input id="fto" type="date" aria-label="تا تاریخ"><input id="fmin" type="number" inputmode="numeric" placeholder="حداقل مبلغ" aria-label="حداقل مبلغ"><input id="fmax" type="number" inputmode="numeric" placeholder="حداکثر مبلغ" aria-label="حداکثر مبلغ"></div></section>
+  <section class="mg" id="mg-info"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>اطلاعات من</h2>
+  <div class="add" style="display:grid">
+    <input id="fn" placeholder="نام" aria-label="نام">
+    <input id="ln" placeholder="نام خانوادگی" aria-label="نام خانوادگی">
+    <input id="bd" class="full" placeholder="تاریخ تولد (مثلاً ۱۳۷۰/۰۵/۱۲)" aria-label="تاریخ تولد">
+    <button class="btn alt full" id="saveinfo" type="button">ذخیره اطلاعات</button>
+    <small id="infomsg" class="full empty" role="status"></small>
+  </div></section>
+  <section class="mg" id="mg-notes"><button class="btn alt mgback" type="button">بازگشت</button>
   <h2>یادداشت خرید</h2>
   <div class="add">
     <input id="ntitle" class="full" placeholder="چی می‌خوای بخری؟ (مثلاً نان و شیر)" aria-label="یادداشت">
@@ -81,8 +100,8 @@
     <input id="namount" class="full" type="number" inputmode="numeric" min="0" placeholder="مبلغ تقریبی (ریال، اختیاری)" aria-label="مبلغ تقریبی">
     <button class="btn full" id="nadd" type="button">افزودن یادداشت</button>
   </div>
-  <div id="notes" class="notes"></div>
-
+  <div id="notes" class="notes"></div></section>
+  <section class="mg" id="mg-transfer"><button class="btn alt mgback" type="button">بازگشت</button>
   <h2>انتقال بین حساب‌ها</h2>
   <div class="add">
     <label class="lbl">از حساب<select id="trfrom"></select></label>
@@ -90,23 +109,78 @@
     <input id="tramount" class="full" type="number" inputmode="numeric" min="0" placeholder="مبلغ انتقال (ریال)" aria-label="مبلغ انتقال">
     <button class="btn full" id="trsave" type="button">ثبت انتقال</button>
     <small id="trmsg" class="full empty" role="status"></small>
-  </div>
-
+  </div></section>
+  <section class="mg" id="mg-debts"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>بدهی و طلب</h2>
+  <div class="add"><select id="dkind" aria-label="نوع"><option value="owe">بدهکارم</option><option value="owed">طلبکارم</option></select><input id="dwho" placeholder="نام شخص" aria-label="نام شخص"><input id="damt" class="full" type="number" inputmode="numeric" min="0" placeholder="مبلغ (ریال)" aria-label="مبلغ"><button class="btn full" id="dadd" type="button">افزودن</button></div>
+  <div id="debts" class="notes"></div></section>
+  <section class="mg" id="mg-goals"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>هدف پس‌انداز</h2>
+  <div class="add"><input id="gtitle" placeholder="هدف (مثلاً خرید گوشی)" aria-label="هدف"><input id="gtarget" type="number" inputmode="numeric" min="0" placeholder="مبلغ هدف (ریال)" aria-label="مبلغ هدف"><button class="btn full" id="gadd" type="button">افزودن هدف</button></div>
+  <div id="goals" class="notes"></div></section>
+  <section class="mg" id="mg-dues"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>اقساط و چک‌ها</h2>
+  <div class="add"><input id="utitle" placeholder="عنوان (مثلاً قسط وام)" aria-label="عنوان"><input id="uamt" type="number" inputmode="numeric" min="0" placeholder="مبلغ (ریال)" aria-label="مبلغ"><input id="udate" class="full" type="date" aria-label="تاریخ سررسید"><button class="btn full" id="uadd" type="button">افزودن</button></div>
+  <div id="dues" class="notes"></div></section>
+  <section class="mg" id="mg-rec"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>تراکنش‌های تکراری</h2>
+  <div class="add"><select id="rkind" aria-label="نوع"><option value="in">درآمد (واریز)</option><option value="out">هزینه (برداشت)</option></select><input id="rday" type="number" inputmode="numeric" min="1" max="31" placeholder="روز ماه (۱ تا ۳۱)" aria-label="روز ماه"><input id="rtitle" class="full" placeholder="عنوان (مثلاً اجاره)" aria-label="عنوان"><input id="ramt" type="number" inputmode="numeric" min="0" placeholder="مبلغ (ریال)" aria-label="مبلغ"><select id="racc" aria-label="حساب"></select><button class="btn full" id="radd" type="button">افزودن</button></div>
+  <div id="recs" class="notes"></div></section>
+  <section class="mg" id="mg-assets"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>دارایی‌ها (ارز و طلا)</h2>
+  <div class="add"><input id="aname" list="anames" placeholder="نام (مثلاً دلار، سکه)" aria-label="نام دارایی"><datalist id="anames"><option value="دلار"><option value="یورو"><option value="سکه امامی"><option value="نیم سکه"><option value="طلا (گرم)"></datalist><input id="aqty" type="number" inputmode="decimal" step="any" min="0" placeholder="مقدار" aria-label="مقدار"><input id="aprice" class="full" type="number" inputmode="numeric" min="0" placeholder="قیمت هر واحد (ریال)" aria-label="قیمت هر واحد"><button class="btn full" id="aadd" type="button">افزودن دارایی</button></div>
+  <div id="assets" class="notes"></div></section>
+  <section class="mg" id="mg-split"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>تقسیم هزینه</h2>
+  <div class="add"><input id="stitle" class="full" placeholder="عنوان (مثلاً شام)" aria-label="عنوان"><input id="stotal" type="number" inputmode="numeric" min="0" placeholder="مبلغ کل (ریال)" aria-label="مبلغ کل"><input id="spaid" placeholder="چه کسی پرداخت کرد؟ (خالی = خودم)" aria-label="پرداخت‌کننده"><input id="sppl" class="full" placeholder="نام بقیه، با ویرگول جدا کن (مثلاً علی، سارا)" aria-label="افراد"><button class="btn full" id="sadd" type="button">تقسیم و ثبت در بدهی و طلب</button></div></section>
+  <section class="mg" id="mg-trend"><button class="btn alt mgback" type="button">بازگشت</button>
+  <h2>روند ماهانه</h2>
+  <div id="trend"></div></section>
+  <section class="mg" id="mg-chart"><button class="btn alt mgback" type="button">بازگشت</button>
   <h2>هزینه‌ها بر اساس دسته</h2>
-  <div id="chart"></div>
-
-  <h2>تراکنش‌ها <small>(برای ویرایش، روی توضیح بزنید)</small></h2>
-  <input id="q" class="search" type="search" placeholder="جستجو در توضیح یا دسته" aria-label="جستجو">
-  <ul id="list"></ul>
-
+  <div id="chart"></div></section>
+  <section class="mg" id="mg-backup"><button class="btn alt mgback" type="button">بازگشت</button>
   <h2>پشتیبان‌گیری</h2>
   <div class="add" style="display:grid">
     <textarea id="bk" class="full" rows="4" dir="ltr" placeholder="متن پشتیبان اینجا نمایش داده می‌شود. برای بازیابی، متن را اینجا جای‌گذاری کنید." aria-label="متن پشتیبان"></textarea>
     <button class="btn alt" id="bkout" type="button">تهیه پشتیبان</button>
     <button class="btn alt" id="bkin" type="button">بازیابی از متن</button>
+    <button class="btn alt full" id="csv" type="button">خروجی اکسل (CSV)</button>
     <small id="bkmsg" class="full empty" role="status"></small>
-  </div>
+  </div></section>
+  </section>
+
+  <section id="themes">
+  <button class="btn alt mgback" id="themeback" type="button">بازگشت</button>
+  <h2>تم‌ها</h2>
+  <div class="tgrid"><button type="button" class="tcard" id="skin-classic" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#1b4fd8,#3d8bff)"><b style="background:#f1f5fb;border-color:#1e5ff0"></b></span><span class="tname">روشن آبی</span></button><button type="button" class="tcard" id="skin-gold" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#17120a,#4b3a0f)"><b style="background:#0a0908;border-color:#d4af37"></b></span><span class="tname">مشکی طلایی</span></button><button type="button" class="tcard" id="skin-pink" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#2a0a1d,#b81f6b)"><b style="background:#0b0710;border-color:#ff4fa3"></b></span><span class="tname">مشکی صورتی</span></button><button type="button" class="tcard" id="skin-white" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#ffffff,#ececef)"><b style="background:#f4f4f5;border-color:#111111"></b></span><span class="tname">سفید</span></button><button type="button" class="tcard" id="skin-emerald" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#064e3b,#10b981)"><b style="background:#06120d;border-color:#22c77a"></b></span><span class="tname">سبز زمردی</span></button><button type="button" class="tcard" id="skin-neon" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#4c1d95,#3b82f6)"><b style="background:#0a0716;border-color:#8b5cf6"></b></span><span class="tname">بنفش نئونی</span></button><button type="button" class="tcard" id="skin-ocean" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#0b4a6f,#12b5c7)"><b style="background:#04141c;border-color:#19c3d6"></b></span><span class="tname">اقیانوسی</span></button><button type="button" class="tcard" id="skin-sunset" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#f97316,#db2777)"><b style="background:#150a10;border-color:#ff7a3d"></b></span><span class="tname">غروب</span></button><button type="button" class="tcard" id="skin-red" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#3a0508,#d4202c)"><b style="background:#0c0506;border-color:#ef2b3a"></b></span><span class="tname">قرمز مشکی</span></button><button type="button" class="tcard" id="skin-petrol" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#0a3a4a,#1c7c95)"><b style="background:#071a22;border-color:#2aa3c4"></b></span><span class="tname">آبی نفتی</span></button><button type="button" class="tcard" id="skin-copper" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#4a2511,#c46a2a)"><b style="background:#140d08;border-color:#d9843b"></b></span><span class="tname">قهوه‌ای و مس</span></button><button type="button" class="tcard" id="skin-navygold" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#0b1a4a,#1e3a8a)"><b style="background:#060b1a;border-color:#e2b44c"></b></span><span class="tname">سرمه‌ای و طلایی</span></button><button type="button" class="tcard" id="skin-yellow" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#1a1603,#b58a06)"><b style="background:#0a0a0a;border-color:#facc15"></b></span><span class="tname">زرد و مشکی</span></button><button type="button" class="tcard" id="skin-orange" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#3b1500,#ea580c)"><b style="background:#0b0705;border-color:#ff6a00"></b></span><span class="tname">نارنجی و مشکی</span></button><button type="button" class="tcard" id="skin-cyber" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#1a0b3a,#00d9ff)"><b style="background:#07070d;border-color:#d9ff00"></b></span><span class="tname">سایبرپانک</span></button><button type="button" class="tcard" id="skin-forest" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#1f3a22,#4d7c3a)"><b style="background:#0b130d;border-color:#6aa84f"></b></span><span class="tname">سبز جنگلی</span></button><button type="button" class="tcard" id="skin-amoled" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#111111,#2a2a2a)"><b style="background:#000000;border-color:#ffffff"></b></span><span class="tname">مشکی خالص</span></button><button type="button" class="tcard" id="skin-silver" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#c9cfd6,#f4f6f8)"><b style="background:#e6e9ec;border-color:#475569"></b></span><span class="tname">نقره‌ای</span></button><button type="button" class="tcard" id="skin-cream" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#f6cfc6,#fde9d9)"><b style="background:#fbf3ea;border-color:#be3455"></b></span><span class="tname">سرخابی و کرم</span></button><button type="button" class="tcard" id="skin-pastel" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#f9c6d8,#fde4ec)"><b style="background:#fff1f5;border-color:#d9568b"></b></span><span class="tname">صورتی پاستلی</span></button><button type="button" class="tcard" id="skin-mint" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#bfeedd,#e7fbf3)"><b style="background:#effaf5;border-color:#0f8f68"></b></span><span class="tname">سبز نعنایی</span></button><button type="button" class="tcard" id="skin-ice" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#cfe8fb,#f0f8ff)"><b style="background:#f3f9ff;border-color:#1f7fc9"></b></span><span class="tname">یخی</span></button><button type="button" class="tcard" id="skin-purplegold" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#2e0b57,#6d28d9)"><b style="background:#0e0716;border-color:#d4af37"></b></span><span class="tname">بنفش و طلایی</span></button><button type="button" class="tcard" id="skin-tealsilver" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#0d3b3f,#7b8a90)"><b style="background:#060d0e;border-color:#2dd4bf"></b></span><span class="tname">فیروزه‌ای و نقره‌ای</span></button><button type="button" class="tcard" id="skin-icenight" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#12335e,#7fb4f0)"><b style="background:#08111c;border-color:#93c5fd"></b></span><span class="tname">آبی یخی و سفید</span></button><button type="button" class="tcard" id="skin-pinkteal" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#7a1d5d,#00bfb3)"><b style="background:#07070c;border-color:#ff4fa3"></b></span><span class="tname">صورتی و فیروزه‌ای</span></button><button type="button" class="tcard" id="skin-greengold" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#0f3d24,#1f7a46)"><b style="background:#07120b;border-color:#d4af37"></b></span><span class="tname">سبز و طلایی</span></button><button type="button" class="tcard" id="skin-chocolate" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#3b1e12,#8a5233)"><b style="background:#120a07;border-color:#c98a5b"></b></span><span class="tname">قهوه‌ای شکلاتی</span></button><button type="button" class="tcard" id="skin-sky" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#bfe4fb,#f2faff)"><b style="background:#eef7ff;border-color:#0284c7"></b></span><span class="tname">آسمانی</span></button><button type="button" class="tcard" id="skin-lemon" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#f1f7a8,#fdfde0)"><b style="background:#fbfde8;border-color:#4d7c0f"></b></span><span class="tname">لیمویی</span></button><button type="button" class="tcard" id="skin-sport" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#0b1f6b,#e11d2e)"><b style="background:#07090f;border-color:#2f6bff"></b></span><span class="tname">اسپرت</span></button><button type="button" class="tcard" id="skin-rainbow" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#ef4444,#f59e0b,#10b981,#3b82f6,#8b5cf6)"><b style="background:#0b0912;border-color:#a78bfa"></b></span><span class="tname">رنگین‌کمانی</span></button><button type="button" class="tcard" id="skin-paper" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#f0e2bd,#fbf3dc)"><b style="background:#f6efdc;border-color:#8a5a1f"></b></span><span class="tname">کاغذی</span></button><button type="button" class="tcard" id="skin-matrix" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#001a0a,#007a33)"><b style="background:#000000;border-color:#00ff66"></b></span><span class="tname">سبز شب</span></button><button type="button" class="tcard" id="skin-auto" aria-pressed="false"><span class="tprev" style="background:linear-gradient(135deg,#1b4fd8 50%,#0b4a6f 50%)"><b style="background:#f1f5fb;border-color:#19c3d6"></b></span><span class="tname">خودکار</span></button><button type="button" class="tcard" id="skin-custom" aria-pressed="false"><span class="tprev" style="background:conic-gradient(#f43f5e,#f59e0b,#10b981,#3b82f6,#8b5cf6,#f43f5e)"><b style="background:#0a0a0f;border-color:#e11d48"></b></span><span class="tname">تم دلخواه</span></button></div>
+  <div id="custrow" style="display:none;margin-top:12px"><label class="lbl">رنگ اصلی<input type="color" id="custcolor" value="#e11d48" style="height:44px;padding:4px"></label></div>
+    <button class="btn pgok" type="button" style="width:100%;margin-top:16px">تایید</button>
+  </section>
+
+  <section id="langs">
+  <button class="btn alt mgback" id="langback" type="button">بازگشت</button>
+  <h2>زبان</h2>
+  <div class="tgrid"><button type="button" class="tcard lcard" id="lang-fa" aria-pressed="false"><span class="flag">🇮🇷</span><span class="tname">فارسی</span></button><button type="button" class="tcard lcard" id="lang-en" aria-pressed="false"><span class="flag">🇬🇧</span><span class="tname">English</span></button><button type="button" class="tcard lcard" id="lang-ar" aria-pressed="false"><span class="flag">🇸🇦</span><span class="tname">العربية</span></button><button type="button" class="tcard lcard" id="lang-es" aria-pressed="false"><span class="flag">🇪🇸</span><span class="tname">Español</span></button><button type="button" class="tcard lcard" id="lang-fr" aria-pressed="false"><span class="flag">🇫🇷</span><span class="tname">Français</span></button><button type="button" class="tcard lcard" id="lang-ru" aria-pressed="false"><span class="flag">🇷🇺</span><span class="tname">Русский</span></button><button type="button" class="tcard lcard" id="lang-tr" aria-pressed="false"><span class="flag">🇹🇷</span><span class="tname">Türkçe</span></button><button type="button" class="tcard lcard" id="lang-ja" aria-pressed="false"><span class="flag">🇯🇵</span><span class="tname">日本語</span></button><button type="button" class="tcard lcard" id="lang-ko" aria-pressed="false"><span class="flag">🇰🇷</span><span class="tname">한국어</span></button><button type="button" class="tcard lcard" id="lang-zh" aria-pressed="false"><span class="flag">🇨🇳</span><span class="tname">中文</span></button><button type="button" class="tcard lcard" id="lang-it" aria-pressed="false"><span class="flag">🇮🇹</span><span class="tname">Italiano</span></button></div>
+    <button class="btn pgok" type="button" style="width:100%;margin-top:16px">تایید</button>
+  </section>
+
+  <section class="pg" id="pg-cur"><button class="btn alt pgback" type="button">بازگشت</button>
+  <h2>ارز</h2>
+  <select id="cursel" aria-label="ارز"><option value="">بدون ارز</option><option value="USD">دلار آمریکا (USD)</option><option value="EUR">یورو (EUR)</option><option value="GBP">پوند انگلیس (GBP)</option><option value="AED">درهم امارات (AED)</option><option value="TRY">لیر ترکیه (TRY)</option><option value="CNY">یوان چین (CNY)</option><option value="JPY">ین ژاپن (JPY)</option><option value="RUB">روبل روسیه (RUB)</option><option value="KRW">وون کره (KRW)</option><option value="SAR">ریال عربستان (SAR)</option><option value="CAD">دلار کانادا (CAD)</option><option value="CHF">فرانک سوئیس (CHF)</option><option value="INR">روپیه هند (INR)</option></select>
+  <label class="lbl" id="ratebox" style="display:none;margin-top:8px">نرخ: هر ۱ واحد این ارز، چند ریال؟<input id="currate" type="number" inputmode="decimal" step="any" min="0" placeholder="ریال"></label>
+  <button class="btn pgok" type="button" style="width:100%;margin-top:16px">تایید</button></section>
+  <section class="pg" id="pg-notif"><button class="btn alt pgback" type="button">بازگشت</button>
+  <h2>یادآوری</h2>
+  <button class="btn alt" id="notif" type="button" style="width:100%">فعال‌سازی اعلان سررسید</button>
+  <button class="btn pgok" type="button" style="width:100%;margin-top:16px">تایید</button></section>
+  <section class="pg" id="pg-cats"><button class="btn alt pgback" type="button">بازگشت</button>
+  <h2>دسته‌های من</h2>
+  <div class="newacc" style="margin-top:0"><input id="newcat" placeholder="نام دسته جدید" aria-label="دسته جدید"><button class="btn alt" id="addcat" type="button">افزودن</button></div>
+  <div id="catlist" class="chips"></div>
+  <button class="btn pgok" type="button" style="width:100%;margin-top:16px">تایید</button></section>
 </main>
+<div class="imgov" id="imgov"><img id="imgview" alt=""></div>
 <script src="logos.js"></script>
 <script src="script.js"></script>
 </body>
